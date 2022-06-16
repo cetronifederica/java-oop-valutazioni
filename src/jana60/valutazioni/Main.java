@@ -17,8 +17,6 @@ public class Main {
 
 		Studente[] studenti = new Studente[5];
 
-		int studPromossi = 0;
-
 		System.out.println("Inserisci i dati degli studenti dell tua classe: ");
 		for (int i = 0; i < studenti.length; i++) {
 
@@ -42,6 +40,12 @@ public class Main {
 
 			String infoStudente = studenti[i].infoStudenteFormat(format);
 			System.out.println(infoStudente);
+		}
+
+		int studPromossi = 0;
+		for (int i = 0; i < studenti.length; i++) {
+			if (studenti[i].valutazione())
+				studPromossi++;
 		}
 
 		System.out.println("Sono stati promossi in tutto " + studPromossi + " studenti");

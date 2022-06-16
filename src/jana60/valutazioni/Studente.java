@@ -16,31 +16,49 @@ public class Studente {
 	}
 
 	// metodo
+	String valutazione2() {
+		if (valutazione()) {
 
-	String valutazione() {
-
-		if (assenze < 25 && mediaVoti >= 2) {
-			return "Promosso";
-
-		} else if (assenze <= 50 && mediaVoti > 2) {
-			return "Promosso";
+			return "PROMOSSO";
 
 		} else {
-			return "Bocciato";
+
+			return "BOCCIATO";
 		}
 
 	}
+
+	boolean valutazione() {
+
+		boolean valutazione = false;
+		if (assenze < 25 && mediaVoti >= 2) {
+			valutazione = true;
+
+			return valutazione;
+
+		} else if (assenze <= 50 && mediaVoti > 2) {
+			valutazione = true;
+
+			return valutazione;
+
+		} else {
+			return valutazione;
+		}
+
+	}
+
+	int studPromossi = 0;
 
 	String infoStudente() {
 		String infoStudente = "ID: " + id;
 		infoStudente += "\nAssenze: " + assenze;
 		infoStudente += "\nMedia Voti: " + mediaVoti;
-		infoStudente += "\nPromosso o Bocciato: " + valutazione();
+		infoStudente += "\nPromosso o Bocciato: " + valutazione2();
 		return infoStudente;
 	}
 
 	String infoStudenteFormat(String format) {
-		return String.format(format, id, assenze, mediaVoti, valutazione());
+		return String.format(format, id, assenze, mediaVoti, valutazione2());
 	}
 
 }
