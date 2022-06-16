@@ -48,7 +48,13 @@ public class Main {
 				studPromossi++;
 		}
 
-		System.out.println("Sono stati promossi in tutto " + studPromossi + " studenti");
+		if (studPromossi >= 2) {
+			System.out.println("Sono stati promossi in tutto " + studPromossi + " studenti");
+		} else {
+			System.out.println("E' stato promosso " + studPromossi + " studente");
+
+		}
+
 		scan.close();
 	}
 }
