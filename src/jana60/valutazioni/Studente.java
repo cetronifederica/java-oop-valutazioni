@@ -17,17 +17,17 @@ public class Studente {
 
 	// metodo
 
-	boolean valutazione() {
-		boolean promosso = false;
+	String valutazione() {
 
 		if (assenze < 25 && mediaVoti >= 2) {
-			promosso = true;
+			return "Promosso";
 
 		} else if (assenze <= 50 && mediaVoti > 2) {
-			promosso = true;
+			return "Promosso";
 
+		} else {
+			return "Bocciato";
 		}
-		return promosso;
 
 	}
 

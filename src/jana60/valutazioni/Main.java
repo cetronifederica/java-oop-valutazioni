@@ -32,12 +32,6 @@ public class Main {
 
 			studenti[i] = new Studente(id, assenze, mediaVoti);
 
-			if (studenti[i].valutazione()) {
-				System.out.println("Promosso");
-				studPromossi++;
-			} else {
-				System.out.println("Bocciato");
-			}
 		}
 		String format = "%15s %15s %15s %15s";
 		System.out.println("Risultati studenti: ");
